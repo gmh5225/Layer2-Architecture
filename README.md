@@ -117,3 +117,8 @@ sequenceDiagram
     ) external returns (bool);
     }
   ```
+## Security Mechanisms
+- Fraud Proof System
+  - Challenge Period: 7 days
+  - Interactive Fraud Proof
+  - Automatic Resolution
