@@ -141,5 +141,9 @@ sequenceDiagram
     }
   }
   ```
+- State Compression
+  - Merkle-Patricia Tries
+  - Witness Generation
+  - Efficient Storage
 
 
