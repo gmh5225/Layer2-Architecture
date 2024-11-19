@@ -71,3 +71,31 @@ sequenceDiagram
     State Manager->>Proof System: Generate Proof
     Proof System->>L1 Contract: Submit State Root
 ```
+
+## Key Components
+- Bridge System
+  ```solidity
+  interface IL1Bridge {
+    // Deposit assets from L1 to L2
+    function deposit(
+        address l1Token,
+        address l2Token,
+        uint256 amount,
+        uint32 gasLimit
+    ) external payable;
+    
+    // Initiate withdrawal from L2 to L1
+    function withdraw(
+        address l1Token,
+        address l2Token,
+        uint256 amount
+    ) external;
+    
+    // Finalize L2 to L1 withdrawal
+    function finalizeWithdrawal(
+        uint256 withdrawalId,
+        address recipient,
+        uint256 amount
+    ) external;
+  }
+  ```
