@@ -59,3 +59,15 @@ sequenceDiagram
     Batch Builder->>L1 Bridge: Submit Batch
     L1 Bridge->>L1 Bridge: Verify & Store
 ```
+### State Updates
+```mermaid
+sequenceDiagram
+    participant L2 State
+    participant State Manager
+    participant Proof System
+    participant L1 Contract
+    
+    L2 State->>State Manager: Update State
+    State Manager->>Proof System: Generate Proof
+    Proof System->>L1 Contract: Submit State Root
+```
