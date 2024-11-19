@@ -99,3 +99,21 @@ sequenceDiagram
     ) external;
   }
   ```
+- State Management
+  ```solidity
+  interface IStateManager {
+    // Submit state root
+    function submitStateRoot(
+        bytes32 stateRoot,
+        bytes32 batchRoot,
+        bytes proof
+    ) external;
+    
+    // Verify state transition
+    function verifyStateTransition(
+        bytes32 fromState,
+        bytes32 toState,
+        bytes proof
+    ) external returns (bool);
+    }
+  ```
