@@ -1,6 +1,9 @@
 # Layer2-Architecture
 Layer 2 scaling solutions build on top of Ethereum (L1) to provide increased throughput and reduced costs while inheriting L1's security guarantees.
 
+
+
+## Architecture Diagram
 ```mermaid
 graph TB
     subgraph "Layer 1 - Ethereum"
@@ -39,4 +42,20 @@ graph TB
     StateManager --> StateCommitments
     StateCommitments --> Bridge
     ProofSystem --> Bridge
+```
+
+
+## Communication Flow
+### Transaction Flow
+```mermaid
+sequenceDiagram
+    participant User
+    participant L2 Sequencer
+    participant Batch Builder
+    participant L1 Bridge
+    
+    User->>L2 Sequencer: Submit Transaction
+    L2 Sequencer->>Batch Builder: Collect Transactions
+    Batch Builder->>L1 Bridge: Submit Batch
+    L1 Bridge->>L1 Bridge: Verify & Store
 ```
