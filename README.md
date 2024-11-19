@@ -122,3 +122,9 @@ sequenceDiagram
   - Challenge Period: 7 days
   - Interactive Fraud Proof
   - Automatic Resolution
+- Data Availability(DA)
+  - All transaction data posted to L1
+  - Compressed format for efficiency
+  - Verifiable data availability
+
+
