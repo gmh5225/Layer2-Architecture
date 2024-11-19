@@ -115,7 +115,7 @@ sequenceDiagram
         bytes32 toState,
         bytes proof
     ) external returns (bool);
-    }
+  }
   ```
 ## Security Mechanisms
 - Fraud Proof System
